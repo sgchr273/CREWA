@@ -1,0 +1,46 @@
+# data
+data/
+datasets/
+
+# caches / features
+cache_*/
+cache_feats/
+cache_feats_proxy/
+cache_pooled_wclass/
+cache_shift_exps/
+cache_subspace/
+cache_vit_subspace/
+ablations/cache_feats/
+
+# training outputs
+checkpoints/
+runs/
+wandb/
+logs/
+outputs/
+
+# numpy/torch artifacts
+*.pt
+*.pth
+*.ckpt
+*.npy
+*.npz
+*.pkl
+
+# archives / matlab
+*.tar.gz
+*.zip
+*.mat
+
+# notebooks checkpoints
+.ipynb_checkpoints/
+
+# OS / editor
+.DS_Store
+*.swp
+
+# ablation datasets
+ablations/data/
+
+# ablation datasets
+ablations/data/

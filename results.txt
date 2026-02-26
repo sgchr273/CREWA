@@ -1,0 +1,204 @@
+cif10, resneyt18
+textures
+AUROC (ID=CIFAR10 test vs OOD=SVHN test): 0.8971
+FPR@95%TPR (OOD positive):               0.2419
+
+isun
+
+AUROC (ID=CIFAR10 test vs OOD=SVHN test): 0.8960
+FPR@95%TPR (OOD positive):               0.2598
+lsun
+
+AUROC (ID=CIFAR10 test vs OOD=SVHN test): 0.8907
+FPR@95%TPR (OOD positive):               0.2642
+
+inat
+AUROC (ID=CIFAR10 test vs OOD=SVHN test): 0.8767
+FPR@95%TPR (OOD positive):               0.3186
+
+places
+AUROC (ID=CIFAR10 test vs OOD=SVHN test): 0.8719
+FPR@95%TPR (OOD positive):               0.3263
+
+SVHN
+AUROC (ID=CIFAR10 test vs OOD=SVHN test): 0.8904
+FPR@95%TPR (OOD positive):               0.2927
+
+MNIST
+========== RESULTS ==========
+AUROC (ID=CIFAR10 test vs OOD=SVHN test): 0.8096
+FPR@95%TPR (OOD positive):               0.4153
+
+
+TIN
+AUROC (ID=CIFAR10 test vs OOD=SVHN test): 0.8734
+FPR@95%TPR (OOD positive):               0.3440
+
+
+resnet34
+
+SVHN
+
+
+========== RESULTS ==========
+AUROC (ID=CIFAR10 test vs OOD=SVHN test): 0.9413
+FPR@95%TPR (OOD positive):               0.1503
+
+
+============================
+
+MNIST
+
+========== RESULTS ==========
+AUROC (ID=CIFAR10 test vs OOD=SVHN test): 0.9201
+FPR@95%TPR (OOD positive):               0.2132
+
+(Extra diagnostic) Residual ratio s1/(s2+eps):
+
+textures
+
+========== RESULTS ==========
+AUROC (ID=CIFAR10 test vs OOD=SVHN test): 0.9601
+FPR@95%TPR (OOD positive):               0.1054
+
+places365
+
+========== RESULTS ==========
+AUROC (ID=CIFAR10 test vs OOD=SVHN test): 0.9352
+FPR@95%TPR (OOD positive):               0.1824
+
+TIN
+========== RESULTS ==========
+AUROC (ID=CIFAR10 test vs OOD=SVHN test): 0.9361
+FPR@95%TPR (OOD positive):               0.1893
+
+
+
+
+
+RESULTS for ablations of the method where we just use nc based signal and no signal of our subspace
+(ood) sgchr@rs3vlnvd3:~/Documents/Subspaces$ python run.py --methods subspaces
+Device: cuda
+Methods: ['subspaces']
+
+Cache paths:
+  ID train feats+labels: ./cache_feats/cifar10__resnet18__l2__resnet18_imagenet_finetuned_nodropout_cifar10.pth__id_train_feats_labels.pt
+  ID test feats: ./cache_feats/cifar10__resnet18__l2__resnet18_imagenet_finetuned_nodropout_cifar10.pth__id_test_feats.pt
+  OOD test feats: ./cache_feats/cifar10__resnet18__l2__resnet18_imagenet_finetuned_nodropout_cifar10.pth__mnist__ood_test_feats.pt
+
+Loading/extracting cached features...
+  train_feats: (50000, 512) train_labels: (50000,)
+  id_feats   : (10000, 512)
+  ood_feats  : (10000, 512) mnist
+[pooled within class pca] retained components k=7 (energy_keep=0.2, rank=512, perp_dim=505)
+
+========== SUBSPACES (S1) ==========
+AUROC (OOD positive):      0.8924
+FPR@95%TPR (OOD positive): 0.2518
+(score means) ID  mean=1.001376 std=0.132663
+(score means) OOD mean=1.189023 std=0.063645
+======================================
+(ood) sgchr@rs3vlnvd3:~/Documents/Subspaces$ python run.py --methods subspaces
+Device: cuda
+Methods: ['subspaces']
+
+Cache paths:
+  ID train feats+labels: ./cache_feats/cifar10__resnet18__l2__resnet18_imagenet_finetuned_nodropout_cifar10.pth__id_train_feats_labels.pt
+  ID test feats: ./cache_feats/cifar10__resnet18__l2__resnet18_imagenet_finetuned_nodropout_cifar10.pth__id_test_feats.pt
+  OOD test feats: ./cache_feats/cifar10__resnet18__l2__resnet18_imagenet_finetuned_nodropout_cifar10.pth__svhn__ood_test_feats.pt
+
+Loading/extracting cached features...
+  train_feats: (50000, 512) train_labels: (50000,)
+  id_feats   : (10000, 512)
+  ood_feats  : (26032, 512) svhn
+[pooled within class pca] retained components k=7 (energy_keep=0.2, rank=512, perp_dim=505)
+
+========== SUBSPACES (S1) ==========
+AUROC (OOD positive):      0.8449
+FPR@95%TPR (OOD positive): 0.3919
+(score means) ID  mean=1.001376 std=0.132663
+(score means) OOD mean=1.158861 std=0.072228
+======================================
+(ood) sgchr@rs3vlnvd3:~/Documents/Subspaces$ python run.py --methods subspaces
+Device: cuda
+Methods: ['subspaces']
+
+Cache paths:
+  ID train feats+labels: ./cache_feats/cifar10__resnet18__l2__resnet18_imagenet_finetuned_nodropout_cifar10.pth__id_train_feats_labels.pt
+  ID test feats: ./cache_feats/cifar10__resnet18__l2__resnet18_imagenet_finetuned_nodropout_cifar10.pth__id_test_feats.pt
+  OOD test feats: ./cache_feats/cifar10__resnet18__l2__resnet18_imagenet_finetuned_nodropout_cifar10.pth__textures__ood_data__ood_test_feats.pt
+
+Loading/extracting cached features...
+  train_feats: (50000, 512) train_labels: (50000,)
+  id_feats   : (10000, 512)
+  ood_feats  : (5160, 512) textures
+[pooled within class pca] retained components k=7 (energy_keep=0.2, rank=512, perp_dim=505)
+
+========== SUBSPACES (S1) ==========
+AUROC (OOD positive):      0.9034
+FPR@95%TPR (OOD positive): 0.2373
+(score means) ID  mean=1.001376 std=0.132663
+(score means) OOD mean=1.195456 std=0.058577
+======================================
+(ood) sgchr@rs3vlnvd3:~/Documents/Subspaces$ python run.py --methods subspaces
+Device: cuda
+Methods: ['subspaces']
+
+Cache paths:
+  ID train feats+labels: ./cache_feats/cifar10__resnet18__l2__resnet18_imagenet_finetuned_nodropout_cifar10.pth__id_train_feats_labels.pt
+  ID test feats: ./cache_feats/cifar10__resnet18__l2__resnet18_imagenet_finetuned_nodropout_cifar10.pth__id_test_feats.pt
+  OOD test feats: ./cache_feats/cifar10__resnet18__l2__resnet18_imagenet_finetuned_nodropout_cifar10.pth__places__ood_data__ood_test_feats.pt
+
+Loading/extracting cached features...
+  train_feats: (50000, 512) train_labels: (50000,)
+  id_feats   : (10000, 512)
+  ood_feats  : (10000, 512) places
+[pooled within class pca] retained components k=7 (energy_keep=0.2, rank=512, perp_dim=505)
+
+========== SUBSPACES (S1) ==========
+AUROC (OOD positive):      0.9168
+FPR@95%TPR (OOD positive): 0.2792
+(score means) ID  mean=1.001376 std=0.132663
+(score means) OOD mean=1.219966 std=0.078439
+======================================
+(ood) sgchr@rs3vlnvd3:~/Documents/Subspaces$ python run.py --methods subspaces
+Device: cuda
+Methods: ['subspaces']
+
+Cache paths:
+  ID train feats+labels: ./cache_feats/cifar10__resnet18__l2__resnet18_imagenet_finetuned_nodropout_cifar10.pth__id_train_feats_labels.pt
+  ID test feats: ./cache_feats/cifar10__resnet18__l2__resnet18_imagenet_finetuned_nodropout_cifar10.pth__id_test_feats.pt
+  OOD test feats: ./cache_feats/cifar10__resnet18__l2__resnet18_imagenet_finetuned_nodropout_cifar10.pth__tiny-imagenet-200__ood_data__ood_test_feats.pt
+
+Loading/extracting cached features...
+  train_feats: (50000, 512) train_labels: (50000,)
+  id_feats   : (10000, 512)
+  ood_feats  : (10000, 512) tiny-imagenet-200
+[pooled within class pca] retained components k=7 (energy_keep=0.2, rank=512, perp_dim=505)
+
+========== SUBSPACES (S1) ==========
+AUROC (OOD positive):      0.9399
+FPR@95%TPR (OOD positive): 0.2263
+(score means) ID  mean=1.001376 std=0.132663
+(score means) OOD mean=1.246579 std=0.078199
+======================================
+(ood) sgchr@rs3vlnvd3:~/Documents/Subspaces$ python run.py --methods subspaces
+Device: cuda
+Methods: ['subspaces']
+
+Cache paths:
+  ID train feats+labels: ./cache_feats/cifar10__resnet18__l2__resnet18_imagenet_finetuned_nodropout_cifar10.pth__id_train_feats_labels.pt
+  ID test feats: ./cache_feats/cifar10__resnet18__l2__resnet18_imagenet_finetuned_nodropout_cifar10.pth__id_test_feats.pt
+  OOD test feats: ./cache_feats/cifar10__resnet18__l2__resnet18_imagenet_finetuned_nodropout_cifar10.pth__cifar100__ood_test_feats.pt
+
+Loading/extracting cached features...
+  train_feats: (50000, 512) train_labels: (50000,)
+  id_feats   : (10000, 512)
+  ood_feats  : (10000, 512) cifar100
+[pooled within class pca] retained components k=7 (energy_keep=0.2, rank=512, perp_dim=505)
+
+========== SUBSPACES (S1) ==========
+AUROC (OOD positive):      0.8897
+FPR@95%TPR (OOD positive): 0.3741
+(score means) ID  mean=1.001376 std=0.132663
+(score means) OOD mean=1.201997 std=0.090014
