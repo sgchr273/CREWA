@@ -32,7 +32,7 @@ python run.py \
     --ckpt /path/to/vit_b16_cifar10.pt \
     --ood_dir /data/ood \
     --ood_dataset tiny-imagenet-200 \
-    --methods subspaces energy msp neco vim \
+    --methods crewa energy msp neco vim \
     --cache_dir ./cache_feats
 ```
 
@@ -45,7 +45,7 @@ python run.py \
     --arch resnet50 \
     --ood_dir /data/places365 \
     --ood_dataset places \
-    --methods subspaces mahalanobis vim deca \
+    --methods crewa mahalanobis vim deca \
     --batch_size 512 --num_workers 8
 ```
 
@@ -58,7 +58,7 @@ python run.py \
     --arch swint \
     --ood_dir /data/inaturalist \
     --ood_dataset inaturalist \
-    --methods subspaces energy neco
+    --methods crewa energy neco
 ```
 
 ---
