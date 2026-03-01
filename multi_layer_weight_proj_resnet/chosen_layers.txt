@@ -1,8 +1,0 @@
-encoder.layers.encoder_layer_8.mlp.3
-encoder.layers.encoder_layer_9.mlp.0
-encoder.layers.encoder_layer_9.mlp.3
-encoder.layers.encoder_layer_10.mlp.0
-encoder.layers.encoder_layer_10.mlp.3
-encoder.layers.encoder_layer_11.mlp.0
-encoder.layers.encoder_layer_11.mlp.3
-heads.0

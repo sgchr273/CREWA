@@ -1,6 +1,7 @@
 # data
 data/
 datasets/
+test/
 
 # caches / features
 cache_*/
@@ -38,9 +39,4 @@ outputs/
 # OS / editor
 .DS_Store
 *.swp
-
-# ablation datasets
-ablations/data/
-
-# ablation datasets
-ablations/data/
+*.png
