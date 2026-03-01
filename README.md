@@ -1,4 +1,4 @@
-# OOD Detection Benchmark
+# Step by step guide to run the Complement Residual Energy with Weight Alignment(CREWA: an out of distribution method)
 
 A unified, well-organized codebase for out-of-distribution detection that
 works across **CIFAR-10/100, SVHN, MNIST, FashionMNIST, and ImageNet-1K** as
