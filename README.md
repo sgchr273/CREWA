@@ -1,4 +1,4 @@
-# Step by step guide to run the Complement Residual Energy with Weight Alignment(CREWA: an out of distribution method)
+# Step by step guide to run the Complement Residual Energy with Weight Alignment(CREWA: an out of distribution detection method)
 
 A unified, well-organized codebase for out-of-distribution detection that
 works across **CIFAR-10/100, SVHN, MNIST, FashionMNIST, and ImageNet-1K** as
@@ -15,8 +15,8 @@ ood_bench/
 ├── models.py       ← backbone building, penultimate extractors, head extraction
 ├── datasets.py     ← ID/OOD dataset builders for all supported datasets
 ├── features.py     ← feature extraction + memmap caching
-├── evaluate.py     ← method dispatch (calls new_methods.py)
-└── new_methods.py  ← OOD scoring methods (unchanged)
+├── evaluate.py     ← method dispatch (calls methods.py)
+└── methods.py  ← OOD scoring methods (unchanged)
 ```
 
 ---

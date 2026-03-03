@@ -266,7 +266,7 @@ def score_subspaces_resid_plus_align_simple(
     return s_np, a_np
 
 
-def run_method_subspaces_simple(
+def run_crewa(
     train_feats: torch.Tensor,
     train_labels: torch.Tensor,
     id_feats: torch.Tensor,

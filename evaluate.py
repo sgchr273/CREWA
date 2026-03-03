@@ -9,7 +9,7 @@ utils.ensure_ood_higher before reporting).
 
 Adding a new method
 -------------------
-1.  Implement the logic in new_methods.py (or here for small helpers).
+1.  Implement the logic in methods.py (or here for small helpers).
 2.  Add a branch in ``run_method()``.
 3.  Add the method name to ALLOWED_METHODS.
 """
@@ -26,7 +26,7 @@ from torch.utils.data import DataLoader
 from utils    import ensure_ood_higher, report_metrics
 from features import logits_from_feats_batched, extract_gaussian_feats_like_id
 
-import new_methods as M
+import methods as M
 
 
 # ─────────────────────────────────────────────
@@ -94,7 +94,7 @@ def run_method(
         logits_id  = logits_from_feats_batched(id_feats,  W, b, device=device)
         logits_ood = logits_from_feats_batched(ood_feats, W, b, device=device)
 
-        id_s, ood_s = M.run_method_subspaces_simple(
+        id_s, ood_s = M.run_crewa(
             train_feats=train_feats,
             train_labels=train_labels,
             id_feats=id_feats,

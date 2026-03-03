@@ -12,7 +12,7 @@ cache_shift_exps/
 cache_subspace/
 cache_vit_subspace/
 ablations/cache_feats/
-
+new_methods_.py
 # training outputs
 checkpoints/
 runs/
