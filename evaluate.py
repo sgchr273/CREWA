@@ -89,7 +89,7 @@ def run_method(
     """
     m = method.lower()
 
-    # ── subspaces ────────────────────────────────────────────────────────────
+    # ── crewa ────────────────────────────────────────────────────────────
     if m == "crewa":
         logits_id  = logits_from_feats_batched(id_feats,  W, b, device=device)
         logits_ood = logits_from_feats_batched(ood_feats, W, b, device=device)
@@ -111,7 +111,7 @@ def run_method(
             use_centered_for_cos=True,
         )
         id_s, ood_s = ensure_ood_higher(np.asarray(id_s), np.asarray(ood_s))
-        report_metrics("subspaces", id_s, ood_s)
+        report_metrics("crewa", id_s, ood_s)
         return id_s, ood_s
 
     # ── mahalanobis ──────────────────────────────────────────────────────────
